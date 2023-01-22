@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MongoDB_Labb1;
 
-public class users
+public class Users
 {
     [BsonId]
     public ObjectId _id { get; set; }

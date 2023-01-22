@@ -12,7 +12,7 @@ namespace MongoDB_Labb1
             //var product1 = new BsonDocument { { "name", "Product 1" }, { "price", 10.99 } };
             //store.products.InsertOne(product1);
 
-            //var user = new users { name = "daniel", email = "daniel.scep@gmail.com", password = "qwerty"};
+            //var user = new Users { name = "daniel", email = "daniel.scep@gmail.com", password = "qwerty"};
             //store.users.InsertOne(user);
 
             var allProducts = store.products.Find(_ => true).ToList();
@@ -20,10 +20,10 @@ namespace MongoDB_Labb1
             {
                 Console.WriteLine(product.name);
                 Console.WriteLine(product.price);
-
             }
 
-
+            UserManager.SignIn(store.users, "daniel.scep@gmail.com", "qwertyy");
         }
+
     }
 }
